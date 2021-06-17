@@ -1,11 +1,13 @@
 import { createStackNavigator } from '@react-navigation/stack';
 import React from 'react';
 import {
+  About,
   PageFive,
   PageFour,
     PageOne,
     PageThree,
-    PageTwo
+    PageTwo,
+    Splash
 } from '../../pages';
 
 // import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
@@ -18,7 +20,7 @@ const Stack = createStackNavigator();
 
 const Ruter = () => {
   return (
-    <Stack.Navigator initialRouteName="PageOne">
+    <Stack.Navigator initialRouteName="Splash">
       <Stack.Screen
         name="PageOne"
         component={PageOne}
@@ -42,6 +44,16 @@ const Ruter = () => {
       <Stack.Screen
         name="PageFive"
         component={PageFive}
+        options={{headerShown: false}}
+      />
+       <Stack.Screen
+        name="Splash"
+        component={Splash}
+        options={{headerShown: false}}
+      />
+       <Stack.Screen
+        name="About"
+        component={About}
         options={{headerShown: false}}
       />
 

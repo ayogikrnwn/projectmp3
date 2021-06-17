@@ -21,64 +21,66 @@ import Sound from 'react-native-sound';
 import {Next, Pic, NextBtn, PwrBtn, PrevBtn} from '../../assets/image';
 import {CardImg} from '../../components';
 
-const Pagetwo = ({navigation}) => {
-  let sound1,
-    sound2,
-    sound3,
-    sound4,
-    sound5,
-    sound6,
-    sound7,
-    sound8,
-    sound9,
-    sound10,
-    sound11,
-    sound12;
+const Pagefour = ({navigation}) => {
+  let sound1;
+  // sound2,
+  // sound3,
+  // sound4,
+  // sound5,
+  // sound6,
+  // sound7,
+  // sound8,
+  // sound9,
+  // sound10,
+  // sound11,
+  // sound12;
 
   useEffect(() => {
     Sound.setCategory('Playback', true); // true = mixWithOthers
     return () => {
       if (sound1) sound1.release();
-      if (sound2) sound2.release();
-      if (sound3) sound3.release();
-      if (sound4) sound4.release();
-      if (sound5) sound5.release();
-      if (sound6) sound6.release();
-      if (sound7) sound7.release();
-      if (sound8) sound8.release();
-      if (sound9) sound9.release();
-      if (sound10) sound10.release();
-      if (sound11) sound11.release();
-      if (sound12) sound12.release();
+      // if (sound2) sound2.release();
+      // if (sound3) sound3.release();
+      // if (sound4) sound4.release();
+      // if (sound5) sound5.release();
+      // if (sound6) sound6.release();
+      // if (sound7) sound7.release();
+      // if (sound8) sound8.release();
+      // if (sound9) sound9.release();
+      // if (sound10) sound10.release();
+      // if (sound11) sound11.release();
+      // if (sound12) sound12.release();
     };
   }, []);
 
   //List of the dummy sound track
   const audioList = [
     {
-      title: 'Play mp3 sound from Local',
+      title: 'Play mp3 sound from LocalS',
       isRequire: true,
       url: require('../../assets/music/erro.mp3'),
       img: require('../../assets/image/pic.jpg'),
     },
     {
-      title: 'Play mp3 sound from remote URL',
-      img: require('../../assets/image/picdua.jpg'),
-      url: 'https://raw.githubusercontent.com/zmxv/react-native-sound-demo/master/advertising.mp3',
-    },
-    {
-      title: 'Play aac sound from Local',
+      title: 'Play mp3 sound from LocalZ',
       isRequire: true,
       url: require('../../assets/music/erro.mp3'),
       img: require('../../assets/image/pic.jpg'),
     },
     {
-      title: 'Play aac sound from remote URL',
-      url: 'https://raw.githubusercontent.com/zmxv/react-native-sound-demo/master/pew2.aac',
+      title: 'Play aac sound from LocalA',
+      isRequire: true,
+      url: require('../../assets/music/erro.mp3'),
       img: require('../../assets/image/pic.jpg'),
     },
     {
-      title: 'Play wav sound from Local',
+      title: 'Play aac sound from LocalB',
+      isRequire: true,
+      url: require('../../assets/music/erro.mp3'),
+      img: require('../../assets/image/pic.jpg'),
+    },
+    {
+      title: 'Play wav sound from LocalC',
       isRequire: true,
       url: require('../../assets/music/erro.mp3'),
       img: require('../../assets/image/pic.jpg'),
@@ -121,6 +123,12 @@ const Pagetwo = ({navigation}) => {
   ];
 
   const playSound = (item, index) => {
+    if (sound1) {
+      sound1.stop(err => {
+        console.log(err);
+      });
+    }
+
     if (index == 0) {
       sound1 = new Sound(item.url, (error, _sound) => {
         if (error) {
@@ -132,145 +140,117 @@ const Pagetwo = ({navigation}) => {
         });
       });
     } else if (index == 1) {
-      sound2 = new Sound(item.url, '', (error, _sound) => {
+      sound1 = new Sound(item.url, '', (error, _sound) => {
         if (error) {
           alert('error' + error.message);
           return;
         }
-        sound2.play(() => {
-          sound2.release();
+        sound1.play(() => {
+          sound1.release();
         });
       });
     } else if (index == 2) {
-      sound3 = new Sound(item.url, (error, _sound) => {
+      sound1 = new Sound(item.url, (error, _sound) => {
         if (error) {
           alert('error' + error.message);
           return;
         }
-        sound3.play(() => {
-          sound3.release();
+        sound1.play(() => {
+          sound1.release();
         });
       });
     } else if (index == 3) {
-      sound4 = new Sound(item.url, '', (error, _sound) => {
+      sound1 = new Sound(item.url, '', (error, _sound) => {
         if (error) {
           alert('error' + error.message);
           return;
         }
-        sound4.play(() => {
-          sound4.release();
+        sound1.play(() => {
+          sound1.release();
         });
       });
     } else if (index == 4) {
-      sound5 = new Sound(item.url, (error, _sound) => {
+      sound1 = new Sound(item.url, (error, _sound) => {
         if (error) {
           alert('error' + error.message);
           return;
         }
-        sound5.play(() => {
-          sound5.release();
+        sound1.play(() => {
+          sound1.release();
         });
       });
     } else if (index == 5) {
-      sound6 = new Sound(item.url, '', (error, _sound) => {
+      sound1 = new Sound(item.url, '', (error, _sound) => {
         if (error) {
           alert('error' + error.message);
           return;
         }
-        sound6.play(() => {
-          sound6.release();
+        sound1.play(() => {
+          sound1.release();
         });
       });
     } else if (index == 6) {
-      sound7 = new Sound(item.url, '', (error, _sound) => {
+      sound1 = new Sound(item.url, '', (error, _sound) => {
         if (error) {
           alert('error' + error.message);
           return;
         }
-        sound7.play(() => {
-          sound7.release();
+        sound1.play(() => {
+          sound1.release();
         });
       });
     } else if (index == 7) {
-      sound8 = new Sound(item.url, '', (error, _sound) => {
+      sound1 = new Sound(item.url, '', (error, _sound) => {
         if (error) {
           alert('error' + error.message);
           return;
         }
-        sound8.play(() => {
-          sound8.release();
+        sound1.play(() => {
+          sound1.release();
         });
       });
     } else if (index == 8) {
-      sound9 = new Sound(item.url, '', (error, _sound) => {
+      sound1 = new Sound(item.url, '', (error, _sound) => {
         if (error) {
           alert('error' + error.message);
           return;
         }
-        sound9.play(() => {
-          sound9.release();
+        sound1.play(() => {
+          sound1.release();
         });
       });
     } else if (index == 9) {
-      sound10 = new Sound(item.url, '', (error, _sound) => {
+      sound1 = new Sound(item.url, '', (error, _sound) => {
         if (error) {
           alert('error' + error.message);
           return;
         }
-        sound10.play(() => {
-          sound10.release();
+        sound1.play(() => {
+          sound1.release();
         });
       });
     } else if (index == 10) {
-      sound11 = new Sound(item.url, '', (error, _sound) => {
+      sound1 = new Sound(item.url, '', (error, _sound) => {
         if (error) {
           alert('error' + error.message);
           return;
         }
-        sound11.play(() => {
-          sound11.release();
+        sound1.play(() => {
+          sound1.release();
         });
       });
     } else if (index == 11) {
-      sound12 = new Sound(item.url, '', (error, _sound) => {
+      sound1 = new Sound(item.url, '', (error, _sound) => {
         if (error) {
           alert('error' + error.message);
           return;
         }
-        sound12.play(() => {
-          sound12.release();
+        sound1.play(() => {
+          sound1.release();
         });
       });
     }
   };
-
-  //   const stopSound = (_item, index) => {
-  //     if (index == 0 && sound1) {
-  //       sound1.stop(() => {
-  //         console.log('Stop');
-  //       });
-  //     } else if (index == 1 && sound2) {
-  //       sound2.stop(() => {
-  //         console.log('Stop');
-  //       });
-  //     } else if (index == 2 && sound3) {
-  //       sound3.stop(() => {
-  //         console.log('Stop');
-  //       });
-  //     } else if (index == 3 && sound4) {
-  //       sound4.stop(() => {
-  //         console.log('Stop');
-  //       });
-  //     } else if (index == 4 && sound5) {
-  //       sound5.stop(() => {
-  //         console.log('Stop');
-  //       });
-  //     } else if (index == 5 && sound6) {
-  //       sound6.stop(() => {
-  //         console.log('Stop');
-  //       });
-  //     }
-  //   };
 
   const ItemView = (item, index) => {
     return (
@@ -287,32 +267,26 @@ const Pagetwo = ({navigation}) => {
 
   return (
     <View style={styles.container}>
-      <Text style={styles.titleText}>
-        Play Music App
-      </Text>
-      <Text style={styles.descText}>
-      Ketuk untuk mendengarkan suara
-      </Text>
-      
+      <Text style={styles.titleText}>Play Music Apps</Text>
+      <Text style={styles.descText}>Ketuk untuk mendengarkan suara</Text>
 
       <ScrollView style={{flex: 1}}>
         <View style={styles.cont}>{audioList.map(ItemView)}</View>
       </ScrollView>
       <Text style={styles.txtsatu}>Halaman 4</Text>
       <View style={styles.btnext}>
-      <TouchableOpacity onPress={() => navigation.navigate('PageThree')}>
-        <Image source={PrevBtn} style={styles.next} />
-      </TouchableOpacity>
-      <TouchableOpacity onPress={() => navigation.navigate('PageFive')} >
-        <Image source={NextBtn} style={styles.next} />
-      </TouchableOpacity>
+        <TouchableOpacity onPress={() => navigation.navigate('Pagethree')}>
+          <Image source={PrevBtn} style={styles.next} />
+        </TouchableOpacity>
+        <TouchableOpacity onPress={() => navigation.navigate('PageFive')}>
+          <Image source={NextBtn} style={styles.next} />
+        </TouchableOpacity>
       </View>
-      
     </View>
   );
 };
 
-export default Pagetwo;
+export default Pagefour;
 
 const styles = StyleSheet.create({
   container: {
@@ -375,17 +349,16 @@ const styles = StyleSheet.create({
   next: {
     height: 80,
     width: 80,
-   paddingLeft: 50
+    paddingLeft: 50,
   },
   btnext: {
-      flexDirection: 'row',
-      justifyContent: 'space-between',
-     
+    flexDirection: 'row',
+    justifyContent: 'space-between',
   },
   txtsatu: {
-      textAlign: 'center',
-      justifyContent: 'center',
-      fontSize: 14,
-      fontWeight: 'bold'
-  }
+    textAlign: 'center',
+    justifyContent: 'center',
+    fontSize: 14,
+    fontWeight: 'bold',
+  },
 });
