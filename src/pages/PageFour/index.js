@@ -275,10 +275,10 @@ const Pagefour = ({navigation}) => {
       </ScrollView>
       <Text style={styles.txtsatu}>Halaman 4</Text>
       <View style={styles.btnext}>
-        <TouchableOpacity onPress={() => navigation.navigate('Pagethree')}>
+        <TouchableOpacity onPress={() => navigation.replace('Pagethree')}>
           <Image source={PrevBtn} style={styles.next} />
         </TouchableOpacity>
-        <TouchableOpacity onPress={() => navigation.navigate('PageFive')}>
+        <TouchableOpacity onPress={() => navigation.replace('PageFive')}>
           <Image source={NextBtn} style={styles.next} />
         </TouchableOpacity>
       </View>

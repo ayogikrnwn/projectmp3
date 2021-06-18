@@ -278,10 +278,10 @@ const Pageone = ({navigation}) => {
         <TouchableOpacity onPress={() => BackHandler.exitApp()}>
           <Image source={PwrBtn} style={styles.next} />
         </TouchableOpacity>
-        <TouchableOpacity onPress={() => navigation.navigate('About')}>
+        <TouchableOpacity onPress={() => navigation.replace('About')}>
           <Image source={InfoBtn} style={styles.next} />
         </TouchableOpacity>
-        <TouchableOpacity onPress={() => navigation.navigate('Pagetwo')}>
+        <TouchableOpacity onPress={() => navigation.replace('Pagetwo')}>
           <Image source={NextBtn} style={styles.next} />
         </TouchableOpacity>
       </View>
