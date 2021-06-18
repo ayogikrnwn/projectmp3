@@ -62,10 +62,9 @@ const Pagethree = ({navigation}) => {
       img: require('../../assets/image/pic.jpg'),
     },
     {
-      title: 'Play mp3 sound from LocalS',
-      isRequire: true,
-      url: require('../../assets/music/erro.mp3'),
+      title: 'Play mp3 sound from LocalZ',
       img: require('../../assets/image/pic.jpg'),
+      url: 'https://raw.githubusercontent.com/zmxv/react-native-sound-demo/master/frog.wav',
     },
     {
       title: 'Play aac sound from LocalA',
@@ -75,15 +74,29 @@ const Pagethree = ({navigation}) => {
     },
     {
       title: 'Play aac sound from LocalB',
-      isRequire: true,
-      url: require('../../assets/music/erro.mp3'),
       img: require('../../assets/image/pic.jpg'),
+      url: 'https://raw.githubusercontent.com/zmxv/react-native-sound-demo/master/frog.wav',
     },
     {
       title: 'Play wav sound from LocalC',
       isRequire: true,
       url: require('../../assets/music/erro.mp3'),
       img: require('../../assets/image/pic.jpg'),
+    },
+    {
+      title: 'Play wav sound from remote URL',
+      img: require('../../assets/image/pic.jpg'),
+      url: 'https://raw.githubusercontent.com/zmxv/react-native-sound-demo/master/frog.wav',
+    },
+    {
+      title: 'Play wav sound from remote URL',
+      img: require('../../assets/image/pic.jpg'),
+      url: 'https://raw.githubusercontent.com/zmxv/react-native-sound-demo/master/frog.wav',
+    },
+    {
+      title: 'Play wav sound from remote URL',
+      img: require('../../assets/image/pic.jpg'),
+      url: 'https://raw.githubusercontent.com/zmxv/react-native-sound-demo/master/frog.wav',
     },
     {
       title: 'Play wav sound from remote URL',
@@ -249,9 +262,38 @@ const Pagethree = ({navigation}) => {
           sound1.release();
         });
       });
+    } else if (index == 12) {
+      sound1 = new Sound(item.url, '', (error, _sound) => {
+        if (error) {
+          alert('error' + error.message);
+          return;
+        }
+        sound1.play(() => {
+          sound1.release();
+        });
+      });
+    } else if (index == 13) {
+      sound1 = new Sound(item.url, '', (error, _sound) => {
+        if (error) {
+          alert('error' + error.message);
+          return;
+        }
+        sound1.play(() => {
+          sound1.release();
+        });
+      });
+    } else if (index == 14) {
+      sound1 = new Sound(item.url, '', (error, _sound) => {
+        if (error) {
+          alert('error' + error.message);
+          return;
+        }
+        sound1.play(() => {
+          sound1.release();
+        });
+      });
     }
   };
-
   const ItemView = (item, index) => {
     return (
       <View style={styles.feature} key={index}>
@@ -267,8 +309,7 @@ const Pagethree = ({navigation}) => {
 
   return (
     <View style={styles.container}>
-      <Text style={styles.titleText}>Play Music Apps</Text>
-      <Text style={styles.descText}>Ketuk untuk mendengarkan suara</Text>
+     
 
       <ScrollView style={{flex: 1}}>
         <View style={styles.cont}>{audioList.map(ItemView)}</View>
